@@ -80,7 +80,7 @@ function Game() {
     const playerHeal = getRandomValue(8, 15);
     const monsterAtk = getRandomValue(8, 15);
     
-    const newHpP = Math.max(0, playerHealth + playerHeal - monsterAtk);
+    const newHpP = Math.max(100, playerHealth + playerHeal - monsterAtk);
     const newHpM = monsterHealth;
     
     setPlayerHealth(newHpP);
