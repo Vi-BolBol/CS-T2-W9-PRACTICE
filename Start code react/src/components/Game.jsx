@@ -41,6 +41,17 @@ function Game() {
   const [logs, setLogs] = useState([]);
   const [winner, setWinner] = useState(null);
 
+
+  // Special
+  const canSpecial = round % 3 === 0;
+
+  // is Game Over?
+  const isOver = winner !== null;
+
+  // Game Over title
+  const gameOver_title = 
+  winner === "player" ? "You won!" : 
+  winner === "monster" ? "You lose!" : "Draw";
   // ----------------------------------------------------------------------------------------------------------
   // BUTTONS EVENT FUNCTIONS
   // ----------------------------------------------------------------------------------------------------------
